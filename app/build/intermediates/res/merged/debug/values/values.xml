@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="dimension" name="cicleWidth"/>
+    <attr format="color" name="color_finger_on"/>
+    <attr format="color" name="color_finger_up"/>
+    <attr format="color" name="color_no_finger_inner_circle"/>
+    <attr format="color" name="color_no_finger_outer_circle"/>
+    <attr format="integer" name="count"/>
+    <attr format="integer" name="dotCount"/>
+    <attr format="color" name="firstColor"/>
+    <attr name="position">
+        <enum name="left_top" value="0"/>
+        <enum name="right_top" value="1"/>
+        <enum name="right_bottom" value="2"/>
+        <enum name="left_bottom" value="3"/>
+    </attr>
+    <attr format="dimension" name="radius"/>
+    <attr format="color" name="sencondColor"/>
+    <attr format="integer" name="splitSize"/>
+    <attr format="integer" name="tryTimes"/>
+    <declare-styleable name="ArcMenu"><attr name="position"/><attr name="radius"/></declare-styleable>
+    <declare-styleable name="GestureLockViewGroup"><attr name="color_no_finger_inner_circle"/><attr name="color_no_finger_outer_circle"/><attr name="color_finger_on"/><attr name="color_finger_up"/><attr name="count"/><attr name="tryTimes"/></declare-styleable>
+    <string name="app_name">AndroidAndvance</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="text_flag_01">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/flag_01</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+</resources>

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_flowlayout.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_flowlayout.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_touch_event.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_touch_event.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_gesturelockviewgroup.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_gesturelockviewgroup.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_dragviewgroup.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_dragviewgroup.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_activity.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_3_7.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_3_7.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_preview.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_preview.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_arcmenu.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_arcmenu.xml"
+    },
+    {
+        "merged": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\layout\\viewgroup_3_7_hor.xml",
+        "source": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\layout\\viewgroup_3_7_hor.xml"
+    }
+]

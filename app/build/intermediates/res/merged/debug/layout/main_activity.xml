@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+
+
+       <com.qcj.learning.view.View3_2
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black" />
+
+     -->
+
+    <!--
+
+      <com.qcj.learning.view.View3_6_1
+           android:text="hhdfasfdasfasdfafddafa"
+           android:layout_width="200dp"
+           android:layout_height="200dp"
+           android:background="@android:color/white" />
+    -->
+    <!--
+
+     <com.qcj.learning.view.View3_6_2
+            android:text="hhdfasfdasfasdfafddafa"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            />
+     -->
+    <!-- <com.qcj.learning.view.View3_6_3_1
+         android:id="@+id/view3_6_3_1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         />
+
+          -->
+    <!--
+    <com.qcj.learning.view.View3_6_3_2
+   android:id="@+id/view3_6_3_2"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   />
+      -->
+
+    <!--
+
+    <com.qcj.learning.view.View5_0_DragView
+ android:id="@+id/view3_6_3_2"
+ android:layout_width="50dp"
+ android:layout_height="50dp"
+ android:background="@android:color/darker_gray"
+ />
+
+     -->
+
+    <!--
+
+    <com.qcj.learning.view.View6_4
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:background="@android:color/white"
+/>
+
+     <com.qcj.learning.view.View6_7
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:background="@android:color/white"
+/>
+
+<com.qcj.learning.view.View6_7_XferModeView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:background="@android:color/white"
+/>
+
+ <com.qcj.learning.view.View_6_7_2_ReflectView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:background="@android:color/white"
+/>
+     -->
+
+
+    <!--<com.qcj.learning.view.exercise.View_CustomVolumBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        />-->
+    <com.qcj.learning.view.exercise.ZoomImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/girl"/>
+</LinearLayout>

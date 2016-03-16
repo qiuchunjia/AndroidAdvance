@@ -1,0 +1,265 @@
+[
+    {
+        "outputFile": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 104,
+                    "endColumn": 49,
+                    "endOffset": 149
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 911,
+                        "endColumn": 50,
+                        "endOffset": 957
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 154,
+                    "endColumn": 49,
+                    "endOffset": 199
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 963,
+                        "endColumn": 50,
+                        "endOffset": 1009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 204,
+                    "endColumn": 62,
+                    "endOffset": 262
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 781,
+                        "endColumn": 63,
+                        "endOffset": 840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 267,
+                    "endColumn": 62,
+                    "endOffset": 325
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 846,
+                        "endColumn": 63,
+                        "endOffset": 905
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 330,
+                    "endColumn": 41,
+                    "endOffset": 367
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1015,
+                        "endColumn": 42,
+                        "endOffset": 1053
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 372,
+                    "endColumn": 44,
+                    "endOffset": 412
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 417,
+                    "endColumn": 44,
+                    "endOffset": 457
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 462,
+                    "endLine": 15,
+                    "endColumn": 11,
+                    "endOffset": 672
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endLine": 13,
+                        "endColumn": 11,
+                        "endOffset": 566
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 677,
+                    "endColumn": 44,
+                    "endOffset": 717
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 722,
+                    "endColumn": 46,
+                    "endOffset": 764
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 769,
+                    "endColumn": 45,
+                    "endOffset": 810
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 815,
+                    "endColumn": 44,
+                    "endOffset": 855
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\attr.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1059,
+                        "endColumn": 45,
+                        "endOffset": 1100
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1224,
+                    "endColumn": 52,
+                    "endOffset": 1272
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1277,
+                    "endLine": 30,
+                    "endColumn": 12,
+                    "endOffset": 1564
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1569,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 1724
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1729,
+                    "endLine": 40,
+                    "endColumn": 12,
+                    "endOffset": 2067
+                },
+                "from": {
+                    "file": "F:\\androidStudio\\ASworkspace\\AndroidAndvance\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            }
+        ]
+    }
+]
