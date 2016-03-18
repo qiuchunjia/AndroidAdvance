@@ -10,6 +10,6 @@
         android:layout_height="match_parent"
         qcj:border_color="#ffffff"
         qcj:border_out_color="#aa000000"
-        qcj:horizontalPadding="10dp" />
+        qcj:horizontalPadding="20dp" />
 
 </RelativeLayout>

@@ -85,6 +85,7 @@ public class ClipBorderView extends View {
         canvas.drawRect(mHorizontalPadding, getHeight() - mVerticalPadding, getWidth() - mHorizontalPadding, getHeight(), mPaint);
         mPaint.setColor(mBorderColor);
         mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStrokeWidth(mBorderWidth);
         //画中间的矩形
         canvas.drawRect(mHorizontalPadding, mVerticalPadding, getWidth() - mHorizontalPadding, getHeight() - mVerticalPadding, mPaint);
     }

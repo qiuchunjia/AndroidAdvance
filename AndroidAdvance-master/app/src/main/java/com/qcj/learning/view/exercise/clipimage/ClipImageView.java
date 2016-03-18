@@ -160,13 +160,12 @@ public class ClipImageView extends ImageView implements ScaleGestureDetector.OnS
                 float dy = y - mLastY;
                 isCheckleftAndRight = isCheckTopAndBottom = true;
                 RectF rectF = getMaxtrixRecF();
-                //当图片小于屏幕的时候
-                if (rectF.width() < getWidth()) {
-                    isCheckleftAndRight = false;
+                // 如果宽度小于屏幕宽度，则禁止左右移动
+                if (rectF.width() <= getWidth() - mHorizontalPadding * 2) {
                     dx = 0;
                 }
-                if (rectF.height() < getHeight()) {
-                    isCheckTopAndBottom = false;
+                // 如果高度小雨屏幕高度，则禁止上下移动
+                if (rectF.height() <= getHeight() - mVerticalPadding * 2) {
                     dy = 0;
                 }
                 mScaleMatrix.postTranslate(dx, dy);
@@ -227,21 +226,27 @@ public class ClipImageView extends ImageView implements ScaleGestureDetector.OnS
      */
     public void checkMatrixBounds() {
         RectF rectF = getMaxtrixRecF();
+        Log.e(TAG, "recf=============================================" + rectF.left);
         float dx = 0;
         float dy = 0;
         float width = getWidth();
         float height = getHeight();
-        if (rectF.left > 0 && isCheckleftAndRight) {
-            dx = -rectF.left;
+        // 如果宽或高大于屏幕，则控制范围 ; 这里的0.001是因为精度丢失会产生问题，但是误差一般很小，所以我们直接加了一个0.01
+        if (rectF.width() + 0.01 >= width - 2 * mHorizontalPadding) {
+            if (rectF.left > mHorizontalPadding) {
+                dx = -rectF.left + mHorizontalPadding;
+            }
+            if (rectF.right < width - mHorizontalPadding) {
+                dx = width - mHorizontalPadding - rectF.right;
+            }
         }
-        if (rectF.right < width && isCheckleftAndRight) {
-            dx = width - rectF.right;
-        }
-        if (rectF.top > 0 && isCheckTopAndBottom) {
-            dy = -rectF.top;
-        }
-        if (rectF.bottom < height && isCheckTopAndBottom) {
-            dy = height - rectF.bottom;
+        if (rectF.height() + 0.01 >= height - 2 * mVerticalPadding) {
+            if (rectF.top > mVerticalPadding) {
+                dy = -rectF.top + mVerticalPadding;
+            }
+            if (rectF.bottom < height - mVerticalPadding) {
+                dy = height - mVerticalPadding - rectF.bottom;
+            }
         }
         Log.e(TAG, "dx=" + dx + "   dy=" + dy);
         mScaleMatrix.postTranslate(dx, dy);
@@ -393,7 +398,7 @@ public class ClipImageView extends ImageView implements ScaleGestureDetector.OnS
             }
             Log.e(TAG, "borderWidth==" + borderWidth + "   borderHeight=" + borderHeight);
             Log.e(TAG, "dw==" + dw + "   dh=" + dh + "    scale=" + scale);
-            initScale=scale;
+            initScale = scale;
             mScaleMatrix.postTranslate((width - dw) / 2, (height - dh) / 2); //dx 大于零 向右移动，dy大于零就向下移动
             mScaleMatrix.postScale(initScale, initScale, width / 2, height / 2);
             setImageMatrix(mScaleMatrix);
