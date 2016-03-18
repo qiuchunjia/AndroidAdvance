@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:qcj="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qcj.learning.view.exercise.clipimage.ClipImageLayout
+        android:id="@+id/clipImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        qcj:border_color="#ffffff"
+        qcj:border_out_color="#aa000000"
+        qcj:horizontalPadding="50dp" />
+
+</RelativeLayout>

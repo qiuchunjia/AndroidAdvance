@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:qcj="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qcj.learning.view.exercise.gestureLockview.GestureLockViewGroup
+        android:id="@+id/lockview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        qcj:color_no_finger_inner_circle="@android:color/background_dark"
+        qcj:color_no_finger_outer_circle="@android:color/holo_blue_bright"
+        qcj:color_finger_on="@android:color/holo_purple"
+        qcj:color_finger_up="@android:color/holo_red_dark"
+        qcj:count="4"
+        qcj:tryTimes="5"
+        >
+
+    </com.qcj.learning.view.exercise.gestureLockview.GestureLockViewGroup>
+
+</RelativeLayout>

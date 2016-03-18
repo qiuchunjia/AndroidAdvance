@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+    <com.qcj.learning.view.exercise.ViewGroup_ArcMenu
+        app:position="right_top"
+        app:radius="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+        <ImageView
+            android:id="@+id/id_button"
+            android:src="@drawable/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </com.qcj.learning.view.exercise.ViewGroup_ArcMenu>
+
+</RelativeLayout>
