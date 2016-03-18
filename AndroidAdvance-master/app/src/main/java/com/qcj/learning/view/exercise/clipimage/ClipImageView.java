@@ -373,14 +373,14 @@ public class ClipImageView extends ImageView implements ScaleGestureDetector.OnS
                 scale = (float) ((borderWidth * 1.0) / dw);
             }
             //当高小于内部高时
-            if (dh < borderHeight && dw > borderWidth) {
+            if (dh < borderHeight && dw >= borderWidth) {
                 scale = (float) (borderHeight * 1.0 / dh);
             }
             if (dw < borderWidth && dh < borderHeight) {
                 scale = (float) Math.max((borderWidth * 1.0) / dw, (borderHeight * 1.0) / dh);
             }
             //当宽高于屏幕的时候
-            if (dw > width && dh <= dh) {
+            if (dw > width && dh <= height) {
                 scale = (float) (width * 1.0 / dw);
             }
             //当高高于屏幕的时候
@@ -393,7 +393,7 @@ public class ClipImageView extends ImageView implements ScaleGestureDetector.OnS
             }
             Log.e(TAG, "borderWidth==" + borderWidth + "   borderHeight=" + borderHeight);
             Log.e(TAG, "dw==" + dw + "   dh=" + dh + "    scale=" + scale);
-            initScale = scale;
+            initScale=scale;
             mScaleMatrix.postTranslate((width - dw) / 2, (height - dh) / 2); //dx 大于零 向右移动，dy大于零就向下移动
             mScaleMatrix.postScale(initScale, initScale, width / 2, height / 2);
             setImageMatrix(mScaleMatrix);

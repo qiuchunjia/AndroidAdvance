@@ -65,6 +65,8 @@ public class ClipImageLayout extends RelativeLayout {
         mImageView.setLayoutParams(params);
         mBorderView.setmBorderColor(mBorderColor);
         mBorderView.setmBorderOutColor(mBorderOutColor);
+        mBorderView.setmHorizontalPadding(mHorizontalPadding);
+        mImageView.setmHorizontalPadding(mHorizontalPadding);
         addView(mImageView);
         addView(mBorderView);
     }
