@@ -42,4 +42,10 @@
         <attr name="border_out_color" />
         <attr name="horizontalPadding" />
     </declare-styleable>
+    <!--viewpagerindicator-->
+    <attr name="visiable_item_count" format="integer" />
+    <declare-styleable name="viewpagerindicator">
+        <attr name="visiable_item_count" />
+    </declare-styleable>
+    s
 </resources>
