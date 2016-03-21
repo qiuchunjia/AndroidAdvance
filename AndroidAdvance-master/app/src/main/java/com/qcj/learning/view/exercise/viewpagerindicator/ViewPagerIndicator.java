@@ -3,7 +3,6 @@ package com.qcj.learning.view.exercise.viewpagerindicator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -84,11 +83,23 @@ public class ViewPagerIndicator extends LinearLayout {
     /**
      * 标题正常时的颜色
      */
-    private static final int COLOR_TEXT_NORMAL = 0x77FFFFFF;
+    private int color_text_normal = 0x77FFFFFF;
     /**
      * 标题选中时的颜色
      */
-    private static final int COLOR_TEXT_HIGHLIGHTCOLOR = 0xFFFFFFFF;
+    private int color_text_highlightcolor = 0xFFFFFFFF;
+    /**
+     * 普通字体大小
+     */
+    private int size_text_normal = 16;
+    /**
+     * 选择后的字体大小
+     */
+    private int size_text_choose = 16;
+    /*
+    三角形的颜色
+    * */
+    private int triangleColor = 0xffffffff;
 
     public ViewPagerIndicator(Context context) {
         super(context);
@@ -104,15 +115,41 @@ public class ViewPagerIndicator extends LinearLayout {
 // 获得自定义属性，tab的数量
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs,
                 R.styleable.viewpagerindicator, 0, 0);
-        mTabVisibleCount = a.getInt(R.styleable.viewpagerindicator_visiable_item_count,
-                COUNT_DEFAULT_TAB);
-        if (mTabVisibleCount < 0)
-            mTabVisibleCount = COUNT_DEFAULT_TAB;
+        int n = a.getIndexCount();
+        for (int i = 0; i < n; i++) {
+            int attr = a.getIndex(i);
+            switch (attr) {
+                case R.styleable.viewpagerindicator_visiable_item_count:
+                    mTabVisibleCount = a.getInt(i, COUNT_DEFAULT_TAB);
+                    break;
+                case R.styleable.viewpagerindicator_color_text_highlightcolor:
+                    color_text_highlightcolor = a.getColor(attr,
+                            color_text_highlightcolor);
+                    break;
+                case R.styleable.viewpagerindicator_color_text_normal:
+                    color_text_normal = a.getColor(attr,
+                            color_text_normal);
+                    break;
+                case R.styleable.viewpagerindicator_size_text_choose:
+                    size_text_choose = (int) a.getDimension(attr,
+                        size_text_choose);
+                    break;
+                case R.styleable.viewpagerindicator_size_text_normal:
+                    size_text_normal = (int) a.getDimension(attr,
+                            size_text_normal);
+                    break;
+                case R.styleable.viewpagerindicator_triangleColor:
+                    triangleColor = a.getColor(attr,
+                            triangleColor);
+                    break;
+            }
+        }
         a.recycle();
+        Log.e(TAG,"size_text_choose="+size_text_choose);
         // 初始化画笔
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        mPaint.setColor(Color.parseColor("#ffffffff"));
+        mPaint.setColor(triangleColor);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setPathEffect(new CornerPathEffect(3));
     }
@@ -220,8 +257,8 @@ public class ViewPagerIndicator extends LinearLayout {
                 if (onPageChangeListener != null) {
                     onPageChangeListener.onPageSelected(position);
                 }
-                resetTextViewColor();
-                setClickTextViewColor(position);
+                resetTextView();
+                setClickTextView(position);
                 fixTheBug(position);
             }
 
@@ -234,7 +271,7 @@ public class ViewPagerIndicator extends LinearLayout {
         });
         //设置当前页
         mViewPager.setCurrentItem(pos);
-        setClickTextViewColor(pos);
+        setClickTextView(pos);
 
     }
 
@@ -272,7 +309,7 @@ public class ViewPagerIndicator extends LinearLayout {
      * @param position
      */
     private void fixTheBug(int position) {
-        if ((position<=mTabVisibleCount-2)) {
+        if ((position <= mTabVisibleCount - 2)) {
             if (getScrollX() > 0) {
                 scrollTo(0, 0);
                 invalidate();
@@ -322,34 +359,36 @@ public class ViewPagerIndicator extends LinearLayout {
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         lp.width = getScreenWidth() / mTabVisibleCount;
         tv.setGravity(Gravity.CENTER);
-        tv.setTextColor(COLOR_TEXT_NORMAL);
+        tv.setTextColor(color_text_normal);
         tv.setText(text);
-        tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+        tv.setTextSize(size_text_normal);
         tv.setLayoutParams(lp);
         return tv;
     }
 
     /**
-     * 设置点击后的textview的颜色
+     * 设置点击后的textview
      *
      * @param pos
      */
-    private void setClickTextViewColor(int pos) {
+    private void setClickTextView(int pos) {
         View view = getChildAt(pos);
         if (view instanceof TextView) {
-            ((TextView) view).setTextColor(COLOR_TEXT_HIGHLIGHTCOLOR);
+            ((TextView) view).setTextColor(color_text_highlightcolor);
+            ((TextView) view).setTextSize(size_text_choose);
         }
     }
 
     /**
-     * 重置textview的颜色
+     * 重置textview
      */
-    private void resetTextViewColor() {
+    private void resetTextView() {
         int cCount = getChildCount();
         for (int i = 0; i < cCount; i++) {
             View view = getChildAt(i);
             if (view instanceof TextView) {
-                ((TextView) view).setTextColor(COLOR_TEXT_NORMAL);
+                ((TextView) view).setTextColor(color_text_normal);
+                ((TextView) view).setTextSize(size_text_normal);
             }
         }
     }

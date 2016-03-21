@@ -42,10 +42,20 @@
         <attr name="border_out_color" />
         <attr name="horizontalPadding" />
     </declare-styleable>
-    <!--viewpagerindicator-->
+    <!--viewpagerindicator的属性-->
     <attr name="visiable_item_count" format="integer" />
+    <attr name="color_text_normal" format="color" />
+    <attr name="color_text_highlightcolor" format="color" />
+    <attr name="size_text_normal" format="dimension" />
+    <attr name="size_text_choose" format="dimension" />
+    <attr name="triangleColor" format="color" />
     <declare-styleable name="viewpagerindicator">
         <attr name="visiable_item_count" />
+        <attr name="color_text_normal"/>
+        <attr name="color_text_highlightcolor" />
+        <attr name="size_text_normal"  />
+        <attr name="size_text_choose" />
+        <attr name="triangleColor"  />
     </declare-styleable>
     s
 </resources>
