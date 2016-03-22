@@ -14,6 +14,7 @@
         qcj:color_text_highlightcolor="#ff0000"
         qcj:color_text_normal="#000000"
         qcj:size_text_choose="16sp"
+        qcj:size_text_normal="14sp"
         qcj:visiable_item_count="4">
 
         <TextView

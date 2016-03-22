@@ -91,11 +91,11 @@ public class ViewPagerIndicator extends LinearLayout {
     /**
      * 普通字体大小
      */
-    private int size_text_normal = 16;
+    private int size_text_normal = 32;
     /**
      * 选择后的字体大小
      */
-    private int size_text_choose = 16;
+    private int size_text_choose = 32;
     /*
     三角形的颜色
     * */
@@ -132,7 +132,7 @@ public class ViewPagerIndicator extends LinearLayout {
                     break;
                 case R.styleable.viewpagerindicator_size_text_choose:
                     size_text_choose = (int) a.getDimension(attr,
-                        size_text_choose);
+                            size_text_choose);
                     break;
                 case R.styleable.viewpagerindicator_size_text_normal:
                     size_text_normal = (int) a.getDimension(attr,
@@ -145,7 +145,6 @@ public class ViewPagerIndicator extends LinearLayout {
             }
         }
         a.recycle();
-        Log.e(TAG,"size_text_choose="+size_text_choose);
         // 初始化画笔
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
@@ -312,6 +311,7 @@ public class ViewPagerIndicator extends LinearLayout {
         if ((position <= mTabVisibleCount - 2)) {
             if (getScrollX() > 0) {
                 scrollTo(0, 0);
+                Log.e(TAG,"fixthebug==postion="+position);
                 invalidate();
             }
         }
@@ -361,7 +361,7 @@ public class ViewPagerIndicator extends LinearLayout {
         tv.setGravity(Gravity.CENTER);
         tv.setTextColor(color_text_normal);
         tv.setText(text);
-        tv.setTextSize(size_text_normal);
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, size_text_normal);
         tv.setLayoutParams(lp);
         return tv;
     }
@@ -375,7 +375,7 @@ public class ViewPagerIndicator extends LinearLayout {
         View view = getChildAt(pos);
         if (view instanceof TextView) {
             ((TextView) view).setTextColor(color_text_highlightcolor);
-            ((TextView) view).setTextSize(size_text_choose);
+            ((TextView) view).setTextSize(TypedValue.COMPLEX_UNIT_PX,size_text_choose);
         }
     }
 
@@ -388,7 +388,7 @@ public class ViewPagerIndicator extends LinearLayout {
             View view = getChildAt(i);
             if (view instanceof TextView) {
                 ((TextView) view).setTextColor(color_text_normal);
-                ((TextView) view).setTextSize(size_text_normal);
+                ((TextView) view).setTextSize(TypedValue.COMPLEX_UNIT_PX,size_text_normal);
             }
         }
     }
