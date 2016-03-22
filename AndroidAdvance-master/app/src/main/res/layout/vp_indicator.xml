@@ -5,7 +5,7 @@
     android:background="#ffffffff"
     android:orientation="vertical">
 
-    <com.qcj.learning.view.exercise.viewpagerindicator.ViewPagerIndicator
+    <com.qcj.learning.view.exercise.viewpagerindicator.ViewPagerRectIndicator
         android:id="@+id/id_indicator"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -15,6 +15,7 @@
         qcj:color_text_normal="#000000"
         qcj:size_text_choose="16sp"
         qcj:size_text_normal="14sp"
+        qcj:indicatorColor="#ff00ff"
         qcj:visiable_item_count="4">
 
         <TextView
@@ -79,7 +80,7 @@
             android:text="推荐7"
             android:textColor="#CCFFFFFF"
             android:textSize="16sp" />
-    </com.qcj.learning.view.exercise.viewpagerindicator.ViewPagerIndicator>
+    </com.qcj.learning.view.exercise.viewpagerindicator.ViewPagerRectIndicator>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/id_vp"

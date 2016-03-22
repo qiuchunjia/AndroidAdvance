@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
             "短信5", "短信6", "短信7", "短信8", "短信9", "短信10", "短信11", "短信12");
 //	private List<String> mDatas = Arrays.asList("短信", "收藏", "推荐");
 
-    private ViewPagerIndicator mIndicator;
+    private ViewPagerRectIndicator mIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class MainActivity extends FragmentActivity {
 
     private void initView() {
         mViewPager = (ViewPager) findViewById(R.id.id_vp);
-        mIndicator = (ViewPagerIndicator) findViewById(R.id.id_indicator);
+        mIndicator = (ViewPagerRectIndicator) findViewById(R.id.id_indicator);
     }
 
 

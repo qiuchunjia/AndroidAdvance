@@ -48,14 +48,14 @@
     <attr name="color_text_highlightcolor" format="color" />
     <attr name="size_text_normal" format="dimension" />
     <attr name="size_text_choose" format="dimension" />
-    <attr name="triangleColor" format="color" />
+    <attr name="indicatorColor" format="color" />
     <declare-styleable name="viewpagerindicator">
         <attr name="visiable_item_count" />
         <attr name="color_text_normal"/>
         <attr name="color_text_highlightcolor" />
         <attr name="size_text_normal"  />
         <attr name="size_text_choose" />
-        <attr name="triangleColor"  />
+        <attr name="indicatorColor"  />
     </declare-styleable>
     s
 </resources>

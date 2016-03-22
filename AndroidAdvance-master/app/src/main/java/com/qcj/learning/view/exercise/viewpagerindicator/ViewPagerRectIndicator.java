@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Rect;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -22,39 +23,36 @@ import com.qcj.learning.R;
 import java.util.List;
 
 /**
- * 实现viewpagertab的指示器
- * Created by qiuchunjia on 2016/3/21.
+ * 实现viewpagertab的指示器  线性的
+ * Created by qiuchunjia on 2016/3/22.
  */
-public class ViewPagerIndicator extends LinearLayout {
-    private static final String TAG = "ViewPagerIndicator";
+public class ViewPagerRectIndicator extends LinearLayout {
+    private static final String TAG = "ViewPagerRectIndicator";
     /**
-     * 绘制三角形的画笔
+     * 绘制长方形的画笔
      */
     private Paint mPaint;
+    private Rect mRect;  //需要绘制的矩形
     /**
-     * path构成一个三角形
+     * 绘制长方形的宽度
      */
-    private Path mPath;
+    private int mRectWidth;
     /**
-     * 三角形的宽度
+     * 绘制长方形的高度
      */
-    private int mTriangleWidth;
-    /**
-     * 三角形的高度
-     */
-    private int mTriangleHeight;
+    private int mRectHeight=3;
 
     /**
-     * 三角形的宽度为单个Tab的1/6
+     * 绘制长方形的宽度为单个Tab的1/2
      */
-    private static final float RADIO_TRIANGEL = 1.0f / 6;
+    private static final float RADIO_TRIANGEL = 1.0f / 2;
     /**
-     * 三角形的最大宽度
+     * 绘制长方形最大宽度
      */
     private final int DIMENSION_TRIANGEL_WIDTH = (int) (getScreenWidth() / 3 * RADIO_TRIANGEL);
 
     /**
-     * 初始时，三角形指示器的偏移量
+     * 绘制长方形初始的偏移量
      */
     private int mInitTranslationX;
     /**
@@ -97,15 +95,15 @@ public class ViewPagerIndicator extends LinearLayout {
      */
     private int size_text_choose = 32;
     /*
-    三角形的颜色
+    矩形的颜色
     * */
-    private int triangleColor = 0xffffffff;
+    private int mRectColor = 0xffffffff;
 
-    public ViewPagerIndicator(Context context) {
+    public ViewPagerRectIndicator(Context context) {
         super(context);
     }
 
-    public ViewPagerIndicator(Context context, AttributeSet attrs) {
+    public ViewPagerRectIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
         initData(context, attrs);
     }
@@ -139,8 +137,8 @@ public class ViewPagerIndicator extends LinearLayout {
                             size_text_normal);
                     break;
                 case R.styleable.viewpagerindicator_indicatorColor:
-                    triangleColor = a.getColor(attr,
-                            triangleColor);
+                    mRectColor = a.getColor(attr,
+                            mRectColor);
                     break;
             }
         }
@@ -148,7 +146,7 @@ public class ViewPagerIndicator extends LinearLayout {
         // 初始化画笔
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        mPaint.setColor(triangleColor);
+        mPaint.setColor(mRectColor);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setPathEffect(new CornerPathEffect(3));
     }
@@ -193,12 +191,12 @@ public class ViewPagerIndicator extends LinearLayout {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        mTriangleWidth = (int) (w / mTabVisibleCount * RADIO_TRIANGEL);// 1/6 of
-        mTriangleWidth = Math.min(DIMENSION_TRIANGEL_WIDTH, mTriangleWidth);
+        mRectWidth = (int) (w / mTabVisibleCount * RADIO_TRIANGEL);// 1/6 of
+        mRectWidth = Math.min(DIMENSION_TRIANGEL_WIDTH, mRectWidth);
         // 初始化三角形
-        initTriangle();
+        initRect();
         // 初始时的偏移量
-        mInitTranslationX = getWidth() / mTabVisibleCount / 2 - mTriangleWidth
+        mInitTranslationX = getWidth() / mTabVisibleCount / 2 - mRectWidth
                 / 2;
 
     }
@@ -209,21 +207,18 @@ public class ViewPagerIndicator extends LinearLayout {
         //绘制指示器
         canvas.save();
         Log.e(TAG, "dispatchDraw getHeight()=" + getHeight());
-        canvas.translate(mInitTranslationX + mTranslationX, getHeight());
-        canvas.drawPath(mPath, mPaint);
+        canvas.translate(mInitTranslationX + mTranslationX, getHeight()-mRectHeight);
+        canvas.drawRect(mRect,mPaint);
         canvas.restore();
     }
 
     /**
-     * 初始化三角形指示器
+     * 初始化长方形
      */
-    private void initTriangle() {
-        mPath = new Path();
-        mTriangleHeight = (int) (mTriangleWidth / 2 / Math.sqrt(2));
-        mPath.moveTo(0, 0);
-        mPath.lineTo(mTriangleWidth, 0);
-        mPath.lineTo(mTriangleWidth / 2, -mTriangleHeight);
-        mPath.close();
+    private void initRect() {
+        mRect=new Rect();
+        mRectHeight= (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,mRectHeight,getResources().getDisplayMetrics());
+        mRect.set(0,0,mRectWidth,mRectHeight);
     }
 
     /**
@@ -355,7 +350,7 @@ public class ViewPagerIndicator extends LinearLayout {
      */
     private TextView generateTextView(String text) {
         TextView tv = new TextView(getContext());
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+        LayoutParams lp = new LayoutParams(
                 LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         lp.width = getScreenWidth() / mTabVisibleCount;
         tv.setGravity(Gravity.CENTER);
@@ -375,7 +370,7 @@ public class ViewPagerIndicator extends LinearLayout {
         View view = getChildAt(pos);
         if (view instanceof TextView) {
             ((TextView) view).setTextColor(color_text_highlightcolor);
-            ((TextView) view).setTextSize(TypedValue.COMPLEX_UNIT_PX,size_text_choose);
+            ((TextView) view).setTextSize(TypedValue.COMPLEX_UNIT_PX, size_text_choose);
         }
     }
 
@@ -388,7 +383,7 @@ public class ViewPagerIndicator extends LinearLayout {
             View view = getChildAt(i);
             if (view instanceof TextView) {
                 ((TextView) view).setTextColor(color_text_normal);
-                ((TextView) view).setTextSize(TypedValue.COMPLEX_UNIT_PX,size_text_normal);
+                ((TextView) view).setTextSize(TypedValue.COMPLEX_UNIT_PX, size_text_normal);
             }
         }
     }
