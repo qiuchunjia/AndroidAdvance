@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidAdvance-master.iml" filepath="$PROJECT_DIR$/AndroidAdvance-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_zhy_CircleMenu/library_zhy_CircleMenu.iml" filepath="$PROJECT_DIR$/library_zhy_CircleMenu/library_zhy_CircleMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication/myapplication.iml" filepath="$PROJECT_DIR$/myapplication/myapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample_zhy_CircleMenu/sample_zhy_CircleMenu.iml" filepath="$PROJECT_DIR$/sample_zhy_CircleMenu/sample_zhy_CircleMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/zhy_ScaleGestureDetector04tmp/zhy_ScaleGestureDetector04tmp.iml" filepath="$PROJECT_DIR$/zhy_ScaleGestureDetector04tmp/zhy_ScaleGestureDetector04tmp.iml" />
     </modules>
   </component>
